@@ -3,11 +3,31 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Home_admin from './components/Home_admin';
+import List_sichon from './components/List_sichon';
+import Form_sichon from './components/Form_sichon';
+
+
+const router = createBrowserRouter ([
+  {
+    path: "/",
+    element : <Home_admin/>
+  },
+  {
+    path: "/ListSichon",
+    element : <List_sichon/>
+  },
+  {
+    path: "/FormSichon",
+    element : <Form_sichon/>
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
