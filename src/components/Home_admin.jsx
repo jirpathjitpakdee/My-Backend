@@ -5,14 +5,14 @@ import Navmenu from './Navmenu'
 function Home_admin() {
   return (
     <div>
-      <div  className='flex '>
+      <div  className='flex'>
        <Sidemenu/>
-      <div className=''>
+      <div className='w-[100rem]'>
       <Navmenu/>
-      <p className='px-8 mt-8'>hello world</p>
       </div>
-    
+      
     </div>
+   
 
     </div>
   )

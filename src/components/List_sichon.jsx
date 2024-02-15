@@ -1,7 +1,7 @@
-import React from 'react'
-import Sidemenu from './Sidemenu'
-import Navmenu from './Navmenu'
-import Table_List from './Table_List'
+import React from 'react';
+import Sidemenu from './Sidemenu';
+import Navmenu from './Navmenu';
+import Table_List from './table/Table_List';
 
 const List_sichon = () => {
     
@@ -9,13 +9,13 @@ const List_sichon = () => {
     <div>
       <div  className='flex '>
        <Sidemenu/>
-      <div >
+      <div className='w-[100rem]'>
       <Navmenu/>
       <div className=' px-[10rem] mt-[5rem] mx-6  '>
       <Table_List/>
       </div>
-
       </div>
+      
     
     </div>
 

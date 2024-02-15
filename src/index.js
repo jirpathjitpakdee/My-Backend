@@ -7,7 +7,11 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Home_admin from './components/Home_admin';
 import List_sichon from './components/List_sichon';
 import Form_sichon from './components/Form_sichon';
-
+import Type_sichon from  './components/Type_sichon';
+import Vill_sichon from './components/Vill_sichon';
+import Reli_sichon from './components/Reli_sichon';
+import River_sichon from './components/River_sichon';
+import Status_sichon from './components/Status_sichon';
 
 const router = createBrowserRouter ([
   {
@@ -21,7 +25,27 @@ const router = createBrowserRouter ([
   {
     path: "/FormSichon",
     element : <Form_sichon/>
-  }
+  },
+  {
+    path: "/TypeSichon",
+    element : <Type_sichon/>
+  },
+  {
+    path: "/VillSichon",
+    element : <Vill_sichon/>
+  },
+  {
+    path: "/ReliSichon",
+    element : <Reli_sichon/>
+  },
+  {
+    path: "/RiverSichon",
+    element : <River_sichon/>
+  },
+  {
+    path: "/StatusSichon",
+    element : <Status_sichon />
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

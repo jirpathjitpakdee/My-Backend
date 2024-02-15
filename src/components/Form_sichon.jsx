@@ -8,7 +8,7 @@ function form_sichon() {
     <div>
       <div  className='flex '>
        <Sidemenu/>
-      <div>
+      <div className='w-[100rem]'>
       <Navmenu/>
       <div className=' px-[10rem] mt-[5rem] mx-6  '>
         <Add_form/>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Text_edit from './Text_edit';
 
 
@@ -12,9 +12,35 @@ import {
     CardFooter,
    
   } from "@material-tailwind/react";
+
+
+  
 function Add_form() {
+  const [input, setInput] = useState({
+    name: '',
+    term: false
+  })
+
+  const handleChange = e => {
+    const { target } = e
+    const { name } = target
+    const value = name === 'term' ? target.checked : target.value
+
+    setInput({
+      ...input,
+      [name]: value
+    })
+  }
+
+  const onSubmit = e => {
+    e.preventDefault()
+
+    console.log('submit value', input)
+  }
   return (
-    <Card className='h-90 w-full'>
+   <div>
+      <form  onSubmit={onSubmit}>
+      <Card className='h-90 w-full'>
       <div>
       <CardHeader
         shadow={false}
@@ -50,7 +76,7 @@ function Add_form() {
             <Typography variant="h6" color="blue-gray" >
               ประเภท
               <div className="mt-4 w-[30rem]">
-                <Input label="ประเภท" />
+                <Input type='name' className='form-control' onChange={handleChange} label="ประเภท" />
              </div>
             </Typography>
           </div>
@@ -182,7 +208,7 @@ function Add_form() {
             <Typography variant="h6" color="blue-gray" >
               วันที่เก็บข้อมูล
               <div className="mt-4 w-50">
-                <Input label="วันที่เก็บข้อมูล" />
+                <Input  label="วันที่เก็บข้อมูล" />
              </div>
             </Typography>
           </div>
@@ -190,9 +216,9 @@ function Add_form() {
         <hr className="my-2 border-blue-gray-50" />
        <CardFooter>
         <div className='mb-8 float-end'>
-        <button
+        <button 
         class="select-none rounded-lg bg-green-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        type="button"
+        type="submit"
       >
         ตกลง
       </button>
@@ -201,6 +227,8 @@ function Add_form() {
       </div>
       
     </Card>
+      </form>
+   </div>
   )
 }
 

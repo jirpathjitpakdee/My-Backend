@@ -29,7 +29,7 @@ const Sidemenu = () => {
     };
    
     return (
-      <Card className="sticky top-0 h-screen w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5   ">
+      <Card className="sticky top-0 h-screen w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5   " >
         <div className="mb-2 p-4">
           <Typography variant="h5" color="blue-gray">
             Sidebar
@@ -61,13 +61,43 @@ const Sidemenu = () => {
                   <ListItemPrefix>
                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                   </ListItemPrefix>
+                   <Link to="/FormSichon">แบบฟอร์ม</Link>
+                </ListItem>
+                <ListItem>
+                  <ListItemPrefix>
+                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                  </ListItemPrefix>
                   <Link to="/ListSichon">รายการ</Link>
                 </ListItem>
                 <ListItem>
                   <ListItemPrefix>
                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                   </ListItemPrefix>
-                  <Link to="/FormSichon">แบบฟอร์ม</Link>
+                  <Link to="/TypeSichon">ประเภท</Link>
+                </ListItem>
+                <ListItem>
+                  <ListItemPrefix>
+                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                  </ListItemPrefix>
+                  <Link to="/VillSichon">แหล่งชุมชล</Link>
+                </ListItem>
+                <ListItem>
+                  <ListItemPrefix>
+                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                  </ListItemPrefix>
+                  <Link to="/ReliSichon">ศาสนา</Link>
+                </ListItem>
+                <ListItem>
+                  <ListItemPrefix>
+                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                  </ListItemPrefix>
+                  <Link to="/RiverSichon">พื้นที่ลุ่มแม่น้ำ</Link>
+                </ListItem>
+                <ListItem>
+                  <ListItemPrefix>
+                    <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                  </ListItemPrefix>
+                  <Link to="/StatusSichon">สถานะ</Link>
                 </ListItem>
               </List>
             </AccordionBody>
