@@ -42,6 +42,12 @@ function Table_status() {
           status: "ภูมิปัญญา",
           location_count: "5",
           information_date: "21 พ.ย. 2566 15:16:01"
+        },
+        {
+          num: "2",
+          status: "ภูมิปัญญา",
+          location_count: "5",
+          information_date: "21 พ.ย. 2566 15:16:01"
         }
       ];
   return (

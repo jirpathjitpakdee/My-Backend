@@ -12,11 +12,13 @@ import Vill_sichon from './components/Vill_sichon';
 import Reli_sichon from './components/Reli_sichon';
 import River_sichon from './components/River_sichon';
 import Status_sichon from './components/Status_sichon';
-
+import Home from './components/Home';
+import Login from './components/Login';
+import Edit_id from './components/Edit_id';
 const router = createBrowserRouter ([
   {
     path: "/",
-    element : <Home_admin/>
+    element : <Home />
   },
   {
     path: "/ListSichon",
@@ -46,6 +48,15 @@ const router = createBrowserRouter ([
     path: "/StatusSichon",
     element : <Status_sichon />
   },
+  {
+    path: "/Login",
+    element : <Login />
+  },
+  {
+    path: "/Edit/:id",
+    element : <Edit_id />
+  }
+  
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

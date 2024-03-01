@@ -1,12 +1,12 @@
 import React from 'react';
-import Home_admin from './components/Home_admin';
+import Home from './components/Home';
 
 
 
 function App() {
   return (
     <div>
-      <Home_admin/>
+      <Home/>
     </div>
   );
 }
