@@ -53,7 +53,7 @@ function Slide_img() {
   };
   return (
         <div>
-            <div className='max-w-[2000px] h-[900px] w-full m-auto py-16 px-4 relative group'>
+            <div className='max-w-[2100px] h-[900px] w-full m-auto py-16  relative group'>
     <div
       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       className='w-full h-full rounded-2xl bg-center bg-cover duration-500'

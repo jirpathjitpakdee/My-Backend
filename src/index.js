@@ -15,10 +15,19 @@ import Status_sichon from './components/Status_sichon';
 import Home from './components/Home';
 import Login from './components/Login';
 import Edit_id from './components/Edit_id';
+import Home_menu1 from './components/Home_menu1';
+import Home_menu2 from './components/Home_menu2';
+import Home_menu3 from './components/Home_menu3';
+import Home_menu4 from './components/Home_menu4';
+import New_forms from './components/New_forms';
 const router = createBrowserRouter ([
   {
     path: "/",
     element : <Home />
+  },
+  {
+    path: "/HomeAdmin",
+    element : <Home_admin/>
   },
   {
     path: "/ListSichon",
@@ -55,7 +64,27 @@ const router = createBrowserRouter ([
   {
     path: "/Edit/:id",
     element : <Edit_id />
-  }
+  },
+  {
+    path: "/HomeMenu1",
+    element : <Home_menu1 />
+  },
+  {
+    path: "/HomeMenu2",
+    element : <Home_menu2 />
+  },
+  {
+    path: "/HomeMenu3",
+    element : <Home_menu3 />
+  },
+  {
+    path: "/HomeMenu4",
+    element : <Home_menu4 />
+  },
+  {
+    path: "/NewForms",
+    element : <New_forms />
+  },
   
 ])
 

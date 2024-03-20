@@ -2,9 +2,9 @@ import React from 'react'
 import Sidemenu from './Sidemenu'
 import Navmenu from './Navmenu'
 
-import New_form from './New_form'
 
-function form_sichon() {
+
+function New_forms() {
   return (
     <div>
       <div  className='flex '>
@@ -12,7 +12,7 @@ function form_sichon() {
       <div className='w-[100rem]'>
       <Navmenu/>
       <div className=' px-[10rem] mt-[5rem] mx-6  '>
-        <New_form/>
+     
       </div>
       </div>
     
@@ -22,4 +22,4 @@ function form_sichon() {
   )
 }
 
-export default form_sichon
+export default New_forms

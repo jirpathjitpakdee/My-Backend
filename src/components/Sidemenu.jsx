@@ -25,7 +25,7 @@ const Sidemenu = () => {
           </Sidebar.Collapse>
           <hr className="my-2 border-blue-gray-50" />
           <Sidebar.Collapse icon={BsBank} label="ศิลปกรรม">
-            <Sidebar.Item href="#">Products</Sidebar.Item>
+            <Sidebar.Item ><Link to="/NewForms">Products</Link></Sidebar.Item>
             <Sidebar.Item href="#">Sales</Sidebar.Item>
             <Sidebar.Item href="#">Refunds</Sidebar.Item>
             <Sidebar.Item href="#">Shipping</Sidebar.Item>
