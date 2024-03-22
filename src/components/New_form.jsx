@@ -6,6 +6,8 @@ import {
     CardFooter,
     Typography,
   } from "@material-tailwind/react";
+import Datepicker from 'flowbite-datepicker/Datepicker';
+
 
 function New_form() {
     const [input, setInput] = useState({
@@ -105,7 +107,12 @@ function New_form() {
                 console.error('Fetch error:', error);
             });
     }
+    
+    const [selectedTime, setSelectedTime] = useState('');
 
+    const handleTimeChange = (event) => {
+      setSelectedTime(event.target.value);
+    };
   return (
     <div>
         <form onSubmit={onSubmit}>
@@ -153,9 +160,9 @@ function New_form() {
             <label  className="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">ใส่ชื่อชุมชล</label>
             <input  id="village" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="แหล่งชุมชล"/>
              </div>
-             <div className=' ml-1 mt-1'>
-            <label  clasName="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">ใส่ชื่อตำบล</label>
-            <input  id="district" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ตำบล" />
+             <div className=' ml-1 mt-1 '>
+            <label  className="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">ใส่ชื่อตำบล</label>
+            <input  id="district" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ตำบล"/>
              </div>
              <div className=' ml-1 mt-1'>
             <label  className="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">ใส่ชื่อพื้นที่</label>
@@ -233,6 +240,34 @@ function New_form() {
             <label  className="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">ช่องทางติดต่อ</label>
             <input  id="contact" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ช่องทางติดต่อ"/>
              </div>
+        </div>
+        <div class="mt-2 grid  grid-cols-3  grid-rows-1">
+        
+        <div className='ml-1'>
+        <label className="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">วันที่ให้ข้อมูล</label>
+            <div class="relative max-w-sm">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                    </svg>
+                </div>
+               <input type="date" Datepicker  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date"/>
+            </div>
+        </div>
+        <div className='ml-1 cols-4 '>
+     <div class="relative max-w-sm">
+     <label className="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white">กรอกเวลา</label>
+     <input
+        type="time"
+        value={selectedTime}
+        onChange={handleTimeChange}
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date"
+      />
+     
+     </div>
+    </div>
+
+
         </div>
         </div>
         </CardBody>

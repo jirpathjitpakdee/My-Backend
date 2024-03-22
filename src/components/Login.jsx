@@ -9,7 +9,7 @@ function Login() {
     console.log('good');
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const url = "http://10.200.10.197:4000/user";
+    const url = "http://192.168.10.117:4000/user";
     
     fetch(url, { method: 'GET' })
       .then((res) => res.json())

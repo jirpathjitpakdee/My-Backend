@@ -32,7 +32,7 @@ function Edit_form() {
   useEffect(() => {
       const fetchData = async () => {
           try {
-              const response = await axios.get(`http://10.200.10.197:4000/locations/${id}`);
+              const response = await axios.get(`http://192.168.10.117:4000/locations/${id}`);
               console.log(response);
               
               const data = response.data[0]; 
@@ -94,7 +94,7 @@ function Edit_form() {
         };
         
        
-        const response = await axios.put(`http://10.200.10.197:4000/update/${id}`, updatedData);
+        const response = await axios.put(`http://192.168.10.117:4000/update/${id}`, updatedData);
         
    
         console.log('Update response:', response.data);

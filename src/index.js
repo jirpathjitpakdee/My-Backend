@@ -20,6 +20,7 @@ import Home_menu2 from './components/Home_menu2';
 import Home_menu3 from './components/Home_menu3';
 import Home_menu4 from './components/Home_menu4';
 import New_forms from './components/New_forms';
+import Newbar from './components/Newbar';
 const router = createBrowserRouter ([
   {
     path: "/",
@@ -84,6 +85,10 @@ const router = createBrowserRouter ([
   {
     path: "/NewForms",
     element : <New_forms />
+  },
+  {
+    path: "/NewBar",
+    element : <Newbar />
   },
   
 ])

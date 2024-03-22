@@ -8,7 +8,7 @@ import { LuNewspaper } from "react-icons/lu";
 import { FaEarthAmericas } from "react-icons/fa6";
 
 const Sidemenu = () => {
-  
+    
     return (
       <div>
       <Sidebar aria-label="Sidebar with multi-level dropdown example " className='sticky top-0 h-screen w-full w-[20rem]'>
@@ -17,39 +17,19 @@ const Sidemenu = () => {
           <Sidebar.Collapse icon={BsTable} label="พื่นที่/สถานที่">
             <Sidebar.Item ><Link to="/FormSichon">แบบฟอร์ม</Link></Sidebar.Item>
             <Sidebar.Item ><Link to="/ListSichon">รายการ</Link></Sidebar.Item>
-            <Sidebar.Item ><Link to="/TypeSichon">ประเภท</Link></Sidebar.Item>
+            <Sidebar.Item ><Link to="/TypeSichon">หมวดหมู่</Link></Sidebar.Item>
             <Sidebar.Item ><Link to="/VillSichon">แหล่งชุมชล</Link></Sidebar.Item>
             <Sidebar.Item ><Link to="/ReliSichon">ศาสนา</Link></Sidebar.Item>
             <Sidebar.Item ><Link to="/RiverSichon">พื้นที่ลุ่มแม่น้ำ</Link></Sidebar.Item>
             <Sidebar.Item ><Link to="/StatusSichon">สถานะ</Link></Sidebar.Item>
           </Sidebar.Collapse>
           <hr className="my-2 border-blue-gray-50" />
-          <Sidebar.Collapse icon={BsBank} label="ศิลปกรรม">
-            <Sidebar.Item ><Link to="/NewForms">Products</Link></Sidebar.Item>
-            <Sidebar.Item href="#">Sales</Sidebar.Item>
-            <Sidebar.Item href="#">Refunds</Sidebar.Item>
-            <Sidebar.Item href="#">Shipping</Sidebar.Item>
-          </Sidebar.Collapse>
-          <hr className="my-2 border-blue-gray-50" />
-          <Sidebar.Collapse icon={LuPencilLine} label="จัดการสไลด์">
-            <Sidebar.Item href="#">Products</Sidebar.Item>
-            <Sidebar.Item href="#">Sales</Sidebar.Item>
-            <Sidebar.Item href="#">Refunds</Sidebar.Item>
-            <Sidebar.Item href="#">Shipping</Sidebar.Item>
-          </Sidebar.Collapse>
-          <hr className="my-2 border-blue-gray-50" />
           <Sidebar.Collapse icon={HiUser} label="จัดการผู้ใช้งาน">
-            <Sidebar.Item href="#">Products</Sidebar.Item>
-            <Sidebar.Item href="#">Sales</Sidebar.Item>
-            <Sidebar.Item href="#">Refunds</Sidebar.Item>
-            <Sidebar.Item href="#">Shipping</Sidebar.Item>
+            <Sidebar.Item href="#">ผู้ใช้งาน</Sidebar.Item>
           </Sidebar.Collapse>
           <hr className="my-2 border-blue-gray-50" />
           <Sidebar.Collapse icon={LuNewspaper} label="จัดการรายงาน">
-            <Sidebar.Item href="#">Products</Sidebar.Item>
-            <Sidebar.Item href="#">Sales</Sidebar.Item>
-            <Sidebar.Item href="#">Refunds</Sidebar.Item>
-            <Sidebar.Item href="#">Shipping</Sidebar.Item>
+            <Sidebar.Item href="#">รายงาน</Sidebar.Item>
           </Sidebar.Collapse>
           <hr className="my-2 border-blue-gray-50" />
           <Sidebar.Item  icon={FaEarthAmericas}>
@@ -58,6 +38,7 @@ const Sidemenu = () => {
         </Sidebar.ItemGroup>
       </Sidebar.Items>
     </Sidebar>
+    
     </div>
    
     );

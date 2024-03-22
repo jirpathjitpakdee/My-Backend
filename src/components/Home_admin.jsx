@@ -1,14 +1,15 @@
 import React from 'react'
 import Sidemenu from './Sidemenu'
 import Navmenu from './Navmenu'
+import Newbar from './Newbar'
 
 function Home_admin() {
   return (
     <div>
       <div  className='flex '>
-       <Sidemenu/>
+       <Newbar/>
       <div className='w-[100rem]'>
-      <Navmenu/>
+    
       </div>
       
     </div>

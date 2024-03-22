@@ -13,7 +13,7 @@ function Table_List() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://10.200.10.197:4000/locations');
+      const response = await axios.get('http://192.168.10.117:4000/locations');
       setLocations(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -21,7 +21,7 @@ function Table_List() {
   };
 
   const deleteLocation = (id) => {
-    axios.delete(`http://10.200.10.197:4000/delete/locations/${id}`)
+    axios.delete(`http://192.168.10.117:4000/delete/locations/${id}`)
       .then((res) => {
         console.log(res);
         // Refresh the data after successful deletion
@@ -60,7 +60,7 @@ function Table_List() {
                     ลองจิจูด
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    <span className="sr-only">Edit</span>
+                    จัดการข้อมูล
                 </th>
             </tr>
         </thead>
@@ -72,7 +72,7 @@ function Table_List() {
               <td className="px-6 py-4" >{location.location ? location.location.lat || 'ไม่ระบุ' : 'ไม่ระบุ'}</td>
               <td className="px-6 py-4" >{location.location ? location.location.lon || 'ไม่ระบุ' : 'ไม่ระบุ'}</td>
               <td>
-                 <Link to={`/Edit/${location._id}`} className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</Link>
+                 <Link to={`/Edit/${location._id}`} className=" focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</Link>
               <button className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" onClick={() => deleteLocation(`${location._id}`)} >Delete</button>
               </td>
               {/* Render additional fields if needed */}
